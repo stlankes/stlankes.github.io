@@ -5,7 +5,7 @@ date:
 modified:
 excerpt:
 image:
-  feature: illiac4.png
+  feature: illiac4.jpg
   credit: Steve Jurvetson (CC BY 2.0)
   creditlink: https://www.flickr.com/photos/44124348109@N01/11210263
 ---
