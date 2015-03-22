@@ -1,12 +1,13 @@
 # Site wide configuration
 
-title: Site Title
+title: stefan's techblog
 locale: en_US
 description: Describe your website here.
 logo: site-logo.png
 search: true
-url: http://stlankes.github.io #http://localhost:4000
-
+#url: http://stlankes.github.io 
+#url: http://localhost:4000
+ 
 # Jekyll configuration
 
 permalink:   /:categories/:title/
@@ -31,13 +32,13 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Your Name
+  name: Stefan Lankes
   avatar: bio-photo.jpg
-  email: you@email.com
+  email: stefan@lankes.org
   disqus-shortname:
   twitter: #username
   facebook: #username
-  github: #username
+  github: stlankes
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
@@ -45,7 +46,7 @@ owner:
   tumblr: #username
   pinterest: #username
   google:
-    plus: #username
+    plus: StefanLankes
     analytics:
     verify:
     ad-client:
