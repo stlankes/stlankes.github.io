@@ -5,9 +5,9 @@ date:
 modified:
 excerpt:
 image:
-  feature: so-simple-sample-image-6.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: illiac4.png
+  credit: Steve Jurvetson (CC BY 2.0)
+  creditlink: https://www.flickr.com/photos/44124348109@N01/11210263
 ---
 
 ### Publisher

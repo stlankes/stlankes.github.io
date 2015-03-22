@@ -1,13 +1,10 @@
 # Site wide configuration
 
-title: stefan's techblog
-locale: en_US
-description: Thoughts about Parallel Architectures and their Operating Systems
-logo: site-logo.png
-search: true
-#url: http://stlankes.github.io 
-#url: http://localhost:4000
- 
+title:            stefan's techblog
+locale:           en_US
+url:              
+
+
 # Jekyll configuration
 
 permalink:   /:categories/:title/
@@ -23,32 +20,41 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..2
+  toc_levels: 1..6
   use_coderay: false
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
 
 
 # Site owner
 owner:
   name: Stefan Lankes
   avatar: bio-photo.jpg
+  bio: #"Describe your self."
   email: stefan@lankes.org
-  disqus-shortname:
+  disqus-shortname: 
   twitter: #username
   facebook: #username
-  github: stlankes
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: stlankes
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
   google:
     plus: StefanLankes
-    analytics:
-    verify:
-    ad-client:
+    analytics: 
+    verify: 
+    ad-client: 
     ad-slot: 
-  bing-verify:
+  bing-verify: 
+  github: stlankes
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: stlankes
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
