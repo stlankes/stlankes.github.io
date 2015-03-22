@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "Publications"
-date: 
-modified:
+date: 2013-04-08T23:28:02.362000+01:00 
+modified: 2015-03-22T23:06:00.362000+01:00
 excerpt:
 image:
-  feature: blue_gene.jpg
-  credit:  Argonne National Laboratory (CC BY 2.0)
-  creditlink: https://www.flickr.com/photos/35734278@N05/3323018571/
+  feature: tape_library.jpg
+  credit:  Derrick Coetzee (CC0 1.0)
+  creditlink: http://www.flickr.com/photos/dcoetzee/6271190493/
 ---
 
 ### 2015

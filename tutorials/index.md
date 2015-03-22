@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Tutorials"
-date: 
-modified:
+date: 2013-09-09T14:31:00.362000+01:00 
+modified: 2015-03-22T23:06:00.362000+01:00
 excerpt:
 image:
   feature: sample-image-6.jpg
