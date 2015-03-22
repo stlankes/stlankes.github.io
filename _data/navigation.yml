@@ -3,8 +3,8 @@
 - title: About
   url: /about/
 
-- title: Articles
-  url: /articles/
+- title: Tutorials
+  url: /tutorials/
 
 - title: Blog
   url: /blog/
@@ -12,8 +12,11 @@
 - title: Theme Setup
   url: /theme-setup/
 
-- title: Made Mistakes
-  url: http://mademistakes.com
+- title: Site Credits
+  url: /credits/
+
+- title: Disclaimer
+  url: /disclaimer/
 
 - title: Search
   url: /search/
