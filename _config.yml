@@ -2,7 +2,7 @@
 
 title:            stefan's techblog
 locale:           en_US
-url:              
+url:              #http://techblog.lankes.org            
 
 
 # Jekyll configuration
@@ -63,7 +63,7 @@ owner:
   github: stlankes
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: stlankes
-  xing: #username
+  xing: Stefan_Lankes
   instagram: #username
   lastfm: #username
   tumblr: #username
