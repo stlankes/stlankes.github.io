@@ -2,7 +2,7 @@
 
 title: stefan's techblog
 locale: en_US
-description: Describe your website here.
+description: Thoughts about Parallel Architectures and their Operating Systems
 logo: site-logo.png
 search: true
 #url: http://stlankes.github.io 
@@ -40,7 +40,7 @@ owner:
   facebook: #username
   github: stlankes
   stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
+  linkedin: stlankes
   instagram: #username
   flickr: #username
   tumblr: #username
