@@ -4,6 +4,7 @@ title: "Publications"
 date: 2013-04-08T23:28:02.362000+01:00 
 modified: 2015-03-22T23:06:00.362000+01:00
 excerpt:
+share: false
 image:
   feature: tape_library.jpg
   credit:  Derrick Coetzee (CC0 1.0)

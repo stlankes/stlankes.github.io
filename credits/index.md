@@ -4,6 +4,7 @@ title: "Site Credits"
 date: 2011-06-07T09:27:00.362000+01:00 
 modified: 2015-03-22T23:06:00.362000+01:00
 excerpt:
+share: false
 image:
   feature: blue_gene.jpg
   credit:  Argonne National Laboratory (CC BY 2.0)
