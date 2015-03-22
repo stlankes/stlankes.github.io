@@ -6,8 +6,8 @@ modified:
 excerpt:
 image:
   feature: blue_gene.jpg
-  credit: Steve Jurvetson (CC BY 2.0)
-  creditlink: https://www.flickr.com/photos/44124348109@N01/11210263
+  credit:  Argonne National Laboratory (CC BY 2.0)
+  creditlink: https://www.flickr.com/photos/35734278@N05/3323018571/
 ---
 
 ### Publisher
