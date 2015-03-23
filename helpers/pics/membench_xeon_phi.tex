@@ -1,0 +1,47 @@
+\documentclass[convert={density=300,size=1080x800,outext=.png}]{standalone}
+\usepackage{units}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,fit,automata,chains,patterns,shadows,shapes,shapes.multipart,arrows,spy}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.units}
+\usepackage{pgfplotstable}
+
+\begin{document}
+\begin{tikzpicture}[spy using outlines={connect spies,magnification=6}]
+  \pgfplotstableread{membench_xeon_phi.dat}\stream
+  \begin{axis}[%
+     %title=Results of the stream benchmark,
+     use units,
+     %legend style={legend pos=north west,font=\tiny},
+     legend pos=north west,
+     minor tick num=1,
+     scaled ticks=false,
+     xmode=log,
+     log basis x=2,
+     xtick={1,2,4,8,16,32,60,120,240},
+     xticklabels={1,2,4,8,16,32,60,120,240},
+     xlabel=Number of Threads,
+     y unit=B/s,y unit prefix=G,
+     ylabel=Throughput,
+     ymin=0,ymax=150
+  ]
+  \addplot[color=red,mark=*] table[x={0}, y expr={\thisrowno{1}/1024}] {\stream};
+  \addlegendentry{Xeon Phi 5110P}
+  %\addplot[color=red,mark=+] table[x={0},y expr={\thisrowno{3}/1024}] {\stream};
+  %\addlegendentry{Xeon Phi 5110P (rep movq)}
+  \addplot[color=blue,mark=triangle*] table[x={0},y expr={\thisrowno{2}/1024}] {\stream};
+  \addlegendentry{Xeon E5-2650}
+  %\addplot[color=blue,mark=+] table[x={0},y expr={\thisrowno{4}/1024}] {\stream};
+  %\addlegendentry{Xeon E5-2650 (rep movq)}
+  %\addplot[color=green,mark=+] table[x={0},y expr={\thisrowno{5}/1024}] {\stream};
+  %\addlegendentry{Xeon E5-2650 (use thread binding)}
+  %
+  %\begin{scope}
+  %    \coordinate (spypoint) at (0,6);
+  %    \coordinate (spyviewer) at (-6.0,50);
+  %    \spy [width=4cm,height=3cm] on (spypoint) in node [fill=white] at (spyviewer);
+  %\end{scope}
+  %
+  \end{axis}
+\end{tikzpicture}
+\end{document}

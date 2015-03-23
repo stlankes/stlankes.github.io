@@ -1,0 +1,26 @@
+# Results of the stream benchmark
+# Only copy benchmark!
+#
+# Array size = 20000000 (elements), Offset = 0 (elements)
+# Memory per array = 152.6 MiB (= 0.1 GiB).
+# Total memory required = 457.8 MiB (= 0.4 GiB).
+# Each kernel will be executed 100 times.
+#  The *best* time for each kernel (excluding the first iteration)
+#  will be used to compute the reported bandwidth.
+#
+# Compiler flags
+# CFLAGS = -O3 -Wall -openmp -xHost -vec-report3 -D_OPENMP -DNTIMES=100 
+# MIC_CFLAGS =-O3 -Wall -openmp -mmic -vec-report3 -D_OPENMP -DNTIMES=100
+#
+# number	Xeon Phi	2 x E5-2650 @ 2.00GHz	Xeon Phi		2 x E5-2650 @ 2.00GHz	2 x E5-2650 @ 2.00GHz
+# of cores	in MB/s		in MB/s			in MB/s, rep memcpy	in MB/s, rep memcpy	in MB/s, KMP_AFFINITY=granularity=fine,compact,1,0
+1		5241.5		8801.1 			1692.4			10830.9			8812.0
+2		10432.6		17769.9			nan			nan			17859.0
+4		20671.8		39574.7			nan			nan			30044.5
+8		39929.1		59422.6			nan			nan			31382.0
+16		68967.5 	40968.8			nan			nan			55682.8 
+32		104783.9	44131.7			nan			nan			53755.9
+60		138640.4	nan			nan			nan			nan
+120		149031.5	nan			nan			nan			nan
+180		148290.5	nan			nan			nan			nan
+240		148077.8	nan			nan			nan			nan

@@ -1,0 +1,46 @@
+\documentclass[convert={density=300,size=1080x800,outext=.png}]{standalone}
+\usepackage{units}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,fit,automata,chains,patterns,shadows,shapes,shapes.multipart,arrows,spy}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.units}
+\usepackage{pgfplotstable}
+
+\begin{document}
+\begin{tikzpicture}[spy using outlines={connect spies,magnification=6}]
+  \pgfplotstableread{scif_writeto_mic2mic.dat}\scifwritemicmic
+  \pgfplotstableread{scif_readfrom_mic2mic.dat}\scifreadfrommicmic
+  \pgfplotstableread{scif_writeto_host.dat}\scifwritehost
+  \pgfplotstableread{scif_writeto_mic.dat}\scifwritemic
+  \begin{axis}[%
+     %title=Results of the stream benchmark,
+     use units,
+     legend cell align=left,
+     legend style={legend pos=north west,font=\tiny},
+     %legend pos=north west,
+     minor tick num=1,
+     scaled ticks=false,
+     xmode=log,
+     log basis x=2,
+     %scaled x ticks = false,
+     xtick={1,4,16,64,256,1024,4096,16384,65536,262144,1048576,4194304},
+     xticklabels={1,4,16,64,256,\unit[1]{k},\unit[4]{k},\unit[16]{k},\unit[64]{k},\unit[256]{k},\unit[1]{M},\unit[4]{M}},
+     xlabel=Message Size,
+     xmin = 64,
+     xmax = 4194304,
+     x unit = Byte,
+     y unit=B/s,y unit prefix=M,
+     ylabel=Throughput,
+     ymin=0%,ymax=150
+  ]
+  \addplot[color=orange,mark=square*] table[x index=0,y index=1] {\scifwritehost};
+  \addlegendentry{host write to MIC0 (RDMA via SCIF)}
+  \addplot[color=green,mark=diamond*] table[x index=0,y index=1] {\scifwritemic};
+  \addlegendentry{MIC0 write to host (RDMA via SCIF)}
+  \addplot[color=red,mark=*] table[x index=0,y index=1] {\scifwritemicmic};
+  \addlegendentry{MIC0 write to MIC1 (RDMA via SCIF)}
+  \addplot[color=blue,mark=+] table[x index=0,y index=1] {\scifreadfrommicmic};
+  \addlegendentry{MIC0 read from MIC1 (RDMA via SCIF)}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
