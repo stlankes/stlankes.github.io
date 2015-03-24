@@ -30,3 +30,9 @@ The following tools are required to build the sample codes:
 * a text editor (e.g. vi)
 
 All examples are published via GitHub at [https://github.com/RWTH-OS/eduOS](https://github.com/RWTH-OS/eduOS).
+
+#### Table of Contents
+
+1. [The *smallest* HelloWorld of the World (or not)](/tutorials/smallest-helloworld-of-the-world-or-not.html)
+2. Kernel debugging with qemu
+3. to be continued
