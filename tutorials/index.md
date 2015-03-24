@@ -34,5 +34,5 @@ All examples are published via GitHub at [https://github.com/RWTH-OS/eduOS](http
 #### Table of Contents
 
 1. [The *smallest* HelloWorld of the World (or not)](/tutorials/smallest-helloworld-of-the-world-or-not.html)
-2. Kernel debugging with qemu
+2. [Kernel debugging with qemu](/tutorials/kernel-debugging-with-qemu.html)
 3. to be continued
