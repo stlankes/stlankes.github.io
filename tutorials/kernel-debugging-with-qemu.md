@@ -70,4 +70,8 @@ At the break point, the virtual machine stops again. It is possible to debug the
 Therefore, kernel debugging is identical to debugging a normal user-level application and based on the same commands.
 The following screenshot shows an example for debugging a kernel.
 
-It is also possible to use a GUI as front-end to the gdb. For instance, the DataDisplay Debugger (DDD) is very easy to use. The DDD shows the gdb shell in the lower part of its windows. Therefore, you have a direct access to the gdb und could reuse this tutorial.
+![Kernel debugging with qemu](/images/kernel_debugging.jpg)
+
+It is also possible to use a GUI as front-end to the gdb. For instance, the DataDisplay Debugger (DDD) is very easy to use.
+The DDD shows the gdb shell in the lower part of its windows.
+Therefore, you have a direct access to the gdb und could reuse this tutorial.
