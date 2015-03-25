@@ -18,7 +18,7 @@ example code is published as branch *stage0* at the GitHub repository
 Therefore, it is possible to get access to the code with the following
 commands:
 
-{% highlight css %}
+{% highlight bash %}
 git clone https://github.com/RWTH-OS/eduOS eduOS
 cd eduOS
 git checkout stage0
@@ -57,7 +57,7 @@ specifiy features that the OS image requests and a check sum. In
 assembler the creation of  such a header is relatively simple and could
 be realized as follows:
 
-{% highlight css %}
+{% highlight nasm %}
 [BITS 32]
 SECTION .mboot
 global start
@@ -95,7 +95,7 @@ input files should be mapped into the output file, and to control the
 memory layout of the output file. We use the following linker script for
 our OS image:
 
-{% highlight css %}
+{% highlight text %}
 OUTPUT_FORMAT("elf32-i386")
 OUTPUT_ARCH("i386")
 ENTRY(start)
@@ -135,7 +135,7 @@ Finally, we want to enter *normal* C code as soon as possible. This
 requires to initialize a stack, which is needed by the C calling
 convention:
 
-{% highlight css %}
+{% highlight nasm %}
 SECTION .text
 ALIGN 4
 stublet:
@@ -168,7 +168,7 @@ The Multiboot Specification defines a data structure, which contains e.g. the si
 The boot loader creates the structure at boot time and stores its address in `ebx`. Therefore, `multiboot_init` saves the register to a global variable.
 Finally, the kernel enters its main function.
 
-{% highlight css %}
+{% highlight c %}
 /* 
  * Note that linker symbols are not variables, they have no memory allocated for
  * maintaining a value, rather their address is their value.
@@ -218,7 +218,7 @@ If we need *standard* functions like `memset` (see above), we have to rewrite th
 
 Now, we could test our *HelloWorld* kernel. I use qemu as a generic machine emulator to test my approach. With
 
-{% highlight css %}
+{% highlight bash %}
 qemu-system-i386 -monitor stdio -kernel eduos.elf
 {% endhighlight %}
 
