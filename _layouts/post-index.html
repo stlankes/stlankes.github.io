@@ -45,12 +45,23 @@
         {% endif %}
       {% endunless %}
       <article>
+      <table class="table" width=100%">
+	<tr>
+	<td width=10%>
+        {% if post.thumb %}
+           <img width=90% src= {{ site.url }}/images/{{ post.thumb }} alt="{{ post.title }} thumbnail image">
+        {% endif %}
+	</td>
+	<td width=90%>
         {% if post.link %}
           <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
         {% else %}
           <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
           <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
         {% endif %}
+	</td>
+	</tr>
+      </table>
       </article>
     {% endfor %}
   </div><!-- /#index -->
