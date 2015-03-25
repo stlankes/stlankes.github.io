@@ -3,11 +3,10 @@ layout: page
 title: "Tutorials"
 date: 2013-09-09T14:31:00.362000+01:00 
 modified: 2015-03-22T23:06:00.362000+01:00
-excerpt:
 image:
-  feature: sample-image-6.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: ritchie.jpg
+  credit: Peter Hamer [CC BY-SA 2.0]
+  creditlink: https://en.wikipedia.org/wiki/Unix
 ---
 
 With [Bran’s](http://www.osdever.net/tutorials/view/brans-kernel-development-tutorial) and [James’](http://www.jamesmolloy.co.uk/tutorial_html/index.html) kernel development tutorials there already exists a variety of  great guides on how to build a UNIX-clone operating system for the x86 architecture.

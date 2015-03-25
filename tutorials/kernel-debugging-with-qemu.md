@@ -3,11 +3,10 @@ layout: page
 title: "Part II: Kernel debugging with qemu"
 date: 2013-09-09T14:31:00.362000+01:00
 modified: 2015-03-22T23:06:00.362000+01:00
-excerpt:
 image:
-  feature: sample-image-6.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: ritchie.jpg
+  credit: Peter Hamer [CC BY-SA 2.0]
+  creditlink: https://en.wikipedia.org/wiki/Unix
 ---
 
 Before I continued my kernel tutorial, I would like to explain the easiest form of kernel debugging.
