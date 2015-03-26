@@ -7,6 +7,8 @@ image:
   feature: ritchie.jpg
   credit: Peter Hamer [CC BY-SA 2.0]
   creditlink: https://en.wikipedia.org/wiki/Unix
+comments: true
+share: true
 ---
 
 With [Bran’s](http://www.osdever.net/tutorials/view/brans-kernel-development-tutorial) and [James’](http://www.jamesmolloy.co.uk/tutorial_html/index.html) kernel development tutorials there already exists a variety of  great guides on how to build a UNIX-clone operating system for the x86 architecture.

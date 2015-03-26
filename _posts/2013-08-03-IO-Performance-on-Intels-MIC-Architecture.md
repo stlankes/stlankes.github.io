@@ -5,6 +5,7 @@ date: 2013-08-03T14:31:00.362000+01:00
 tags: [MIC]
 thumb: thumbnail-netio_phi.png
 share: true
+comments: true
 ---
 
 Over the last few months I have been working with Intel’s MIC architecture.

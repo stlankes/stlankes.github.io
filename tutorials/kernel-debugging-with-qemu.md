@@ -7,6 +7,8 @@ image:
   feature: ritchie.jpg
   credit: Peter Hamer [CC BY-SA 2.0]
   creditlink: https://en.wikipedia.org/wiki/Unix
+comments: true
+share: true
 ---
 
 Before I continued my kernel tutorial, I would like to explain the easiest form of kernel debugging.

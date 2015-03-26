@@ -7,6 +7,8 @@ image:
   feature: ritchie.jpg
   credit: Peter Hamer [CC BY-SA 2.0]
   creditlink: https://en.wikipedia.org/wiki/Unix
+comments: true
+share: true
 ---
 
 First, I want to show how a kernel can be loaded into the memory and
