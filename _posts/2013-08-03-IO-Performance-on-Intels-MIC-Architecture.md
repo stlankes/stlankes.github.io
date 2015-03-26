@@ -39,7 +39,9 @@ By the way, why does the Intel Xeon Phi 5110P not support PCIe V3.0, which promi
 The figure shows also that we reach *nearly* the theoretical peak performance, if we use Intel’s [Symmetric Communication Interface](http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/xeon-phi-software-developers-guide.pdf) (SCIF).
 SCIF is the low-level communication backbone between the host and the MIC in a heterogeneous computing environment.
 
-![SCIF bandwidth](/images/netio_phi.png)
+<figure>
+<img src="/images/netio_phi.png">
+</figure>
 
 Admittedly, the single core performance of the current MIC architecture is poor, which could explain the bad IO performance.
 However, does this explain everything?
