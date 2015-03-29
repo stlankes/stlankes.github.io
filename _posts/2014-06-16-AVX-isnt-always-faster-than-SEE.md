@@ -214,7 +214,7 @@ However, the result is only accurate in the 12 most significant bits of the mant
 With the  Newton-Raphson Method we are able to increase the precision.
 In our case, the iterative method has the following iteration loop, where x1 represents the new and more accurate value, x0 the value of the previous cycle or in the first pass the initial value from vrcpps, and d the double-precision result of (1 + x*x):
 
-> x1 = x0 * (2 – d * x0) = 2 * x0 – d * x0 * x0
+	x1 = x0 * (2 – d * x0) = 2 * x0 – d * x0 * x0
 
 To get a double-precision result of 1/(1+x*x), we have to run through the iterative loop twice.
 Consequently, we have to replace line 36 of the above AVX code by the following lines:
@@ -241,6 +241,6 @@ vmulpd    ymm4, ymm3
 
 Voilà, my AVX code is now twice as fast as my SSE code. :-)
 
-> Time: 5.705789 sec (C code)
-> Time: 2.213902 sec (SSE)
-> Time: 1.172251 sec (AVX)
+	Time: 5.705789 sec (C code)
+	Time: 2.213902 sec (SSE)
+	Time: 1.172251 sec (AVX)
