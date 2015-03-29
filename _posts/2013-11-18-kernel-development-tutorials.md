@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "With Bran’s and James’ kernel development tutorials there already exists a variety of  great guide..."
+title: "New kernel development tutorials"
 date: 2013-11-18T14:31:00.362000+01:00 
 thumb: thumbnail-eduos.jpg
 tags: [Tutorials, link post]
