@@ -8,8 +8,8 @@ share: true
 comments: true
 ---
 
-To explain vectorization via *Streaming SIMD Extensions* (SSE) I mostly use the simple calculation of π.
-I calculate π by determining the integral between 0 and 1 of the function f(x) = 4 / (1+x*x).
+To explain vectorization via *Streaming SIMD Extensions* (SSE) I mostly use the simple calculation of &pi;.
+I calculate &pi; by determining the integral between 0 and 1 of the function f(x) = 4 / (1 + x * x).
 The integral is the surface area below f(x) and could be approximated by the accumulation of the surface areas of small rectangles, which are drawn below f(x).
 
 <figure>
@@ -71,7 +71,7 @@ That’s why I frequently look at the new extensions of the instruction set.
 
 In principle, with SSE you are able to store two double-precision floating point numbers in one register.
 Consequently, you could see this as a small vector with two values.
-To accelerate the calculation of π, I determine two rectangles’ heights in one pass.
+To accelerate the calculation of &pi;, I determine two rectangles’ heights in one pass.
 
 {% highlight nasm %}
 SECTION .data
@@ -138,10 +138,10 @@ L2:
 I tried to update my example and moved to the modern *Advanced Vector Extensions* (AVX).
 AVX increases the register size to 256 bit, which allows us to store four double-precision floating point numbers in one register.
 AVX comes with a new instruction set.
-However, the differences between AVX and SSE are small. The new prefix "v" is added to the instructions and they have now three (instead of two) operands.
+However, the differences between AVX and SSE are small. The new prefix `v` is added to the instructions and they have now three (instead of two) operands.
 The additional operand is the destination register of the calculation.
 
-In theory, the calculation of π will be accelerated by factor of two, if we use AVX and double the number of calculations per iteration.
+In theory, the calculation of &pi; will be accelerated by factor of two, if we use AVX and double the number of calculations per iteration.
 The one-to-one translation of the SSE to AVX code is as follows:
 {% highlight nasm %}
 SECTION .data
@@ -209,14 +209,14 @@ In our example, it destroys any performance benefit of AVX.
 
 This behavior surprised me. However, it is extremely simple to solve the performance issues.
 Intel already described the solution in its 1999 document *Increasing the Accuracy of the Results from the Reciprocal and Reciprocal Square Root Instructions using the Newton-Raphson Method*. 
-In principle, we have to estimate the reciprocal of (1+x*x) with the instruction vrcpps, which is extremely fast.
+In principle, we have to estimate the reciprocal of (1 + x * x) with the instruction `vrcpps`, which is extremely fast.
 However, the result is only accurate in the 12 most significant bits of the mantissa, which is not accurate enough to get single-precision floating-point numbers -- and our aim is to get double-precision.
 With the  Newton-Raphson Method we are able to increase the precision.
-In our case, the iterative method has the following iteration loop, where x1 represents the new and more accurate value, x0 the value of the previous cycle or in the first pass the initial value from vrcpps, and d the double-precision result of (1 + x*x):
+In our case, the iterative method has the following iteration loop, where x1 represents the new and more accurate value, x0 the value of the previous cycle or in the first pass the initial value from vrcpps, and d the double-precision result of (1 + x * x):
 
 	x1 = x0 * (2 – d * x0) = 2 * x0 – d * x0 * x0
 
-To get a double-precision result of 1/(1+x*x), we have to run through the iterative loop twice.
+To get a double-precision result of 1/(1 + x * x), we have to run through the iterative loop twice.
 Consequently, we have to replace line 36 of the above AVX code by the following lines:
 
 {% highlight nasm %}
