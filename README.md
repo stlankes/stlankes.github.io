@@ -1,6 +1,6 @@
-# Minimal Mistakes
+# techblog.lankes.org
 
-**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
+**[techblog.lankes.org](https://techblog.lankes.org) is based on (http://mmistakes.github.io/minimal-mistakes)**, which is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
 
 ## Minimal Mistakes is all about:
 
@@ -11,8 +11,6 @@
 * Simple and clear permalink structure.
 * [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
 * Support for Disqus Comments
-
-![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
 
 See a [live version of Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) hosted on GitHub.
 
