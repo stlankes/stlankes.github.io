@@ -1,6 +1,6 @@
 # techblog.lankes.org
 
-**[techblog.lankes.org](https://techblog.lankes.org) is based on (http://mmistakes.github.io/minimal-mistakes)**, which is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
+**[techblog.lankes.org](https://techblog.lankes.org)** is based on **(http://mmistakes.github.io/minimal-mistakes)**, which is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
 
 ## Minimal Mistakes is all about:
 
