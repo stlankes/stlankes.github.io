@@ -1,14 +1,31 @@
-<div class="social-share">
-  <h4>Share on</h4>
-  <ul>
-    <li>
-      <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
-    </li>
-    <li>
-      <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
-    </li>
-  </ul>
-</div><!-- /.social-share -->
+<center>
+<!-- Twitter -->
+<a href="http://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title | url_encode }}" title="Share on Twitter" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+</a>
+
+<!-- Google Plus -->
+<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+</a>
+
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+</a>
+
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}" title="Share on LinkedIn" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+</a>
+
+<!-- Flattr -->
+<a href="https://flattr.com/submit/auto?user_id=stlankes&url={{ site.url }}{{ page.url }}" target="_blank" class="share-btn flattr">
+<i class="pf pf-flattr"></i>
+</a>
+
+<!-- Email -->
+<a href="mailto:?subject={{ page.title | url_encode }}&body={{ site.url }}{{ page.url }}" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+</a>
+</center>
