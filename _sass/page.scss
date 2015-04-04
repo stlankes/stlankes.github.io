@@ -599,7 +599,6 @@ $button-size: 1.5rem;
 	@include clearfix;
 	clear: both;
 	padding-bottom: 3em;
-	a,
 	a:active,
 	a:visited,
 	p,
@@ -607,6 +606,10 @@ $button-size: 1.5rem;
 	h5,
 	h6,
 	span { 
+		@include font-rem(14);
+	}
+	a {
+		text-decoration: underline;
 		@include font-rem(14);
 	}
 	footer {
