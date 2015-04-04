@@ -11,3 +11,6 @@
 
 - title: Imprint
   url: /imprint/
+
+- title: RSS
+  url: /feed.xml
