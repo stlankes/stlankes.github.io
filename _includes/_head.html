@@ -1,8 +1,15 @@
 <meta charset="utf-8">
+<meta http-equiv="content-language" content="en-us">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
 <meta name="keywords" content="{{ page.tags | join: ', ' }}">
-<meta http-equiv="content-language" content="en-us">
+
+{% if page.author %}
+<meta name="author" content="{{ site.data.authors[page.author].name }}">
+{% else %}
+<meta name="author" content="{{ site.owner.name }}">
+{% endif %}
+
 {% if page.author %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
 {% endif %}
