@@ -10,6 +10,7 @@ url:              #https://techblog.lankes.org
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: pygments
+permalink: pretty
 sass:
   sass_dir: _sass
   style: compressed
