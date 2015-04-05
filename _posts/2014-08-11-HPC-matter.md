@@ -8,8 +8,8 @@ link: http://www.ioccc.org/years.html#2012
 share: true
 ---
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/assets/js/jquery.fitvids.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://techblog.lankes.org/assets/js/jquery.fitvids.js"></script>
 <script>
 	$(".container").fitVids();
 </script>
