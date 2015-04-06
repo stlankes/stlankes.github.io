@@ -25,7 +25,7 @@ kramdown:
   use_coderay: false
 
 scholar:
-  style: assets/bibliography/myieee.csl
+  style: assets/bibliography/ieee-with-url.csl
   locale: en
  
   sort_by: year
