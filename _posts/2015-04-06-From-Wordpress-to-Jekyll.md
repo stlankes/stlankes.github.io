@@ -17,7 +17,7 @@ For the migration, I used the guideline from [PullReview](http://blog.8thcolor.c
 Only my publication list was a challenge.
 Nearly all my papers are written in LaTeX.
 Consequently, I maintain my publications with a [BibTeX](http://en.wikipedia.org/wiki/BibTeX) file and I want to generate automatically my publication list from this file.
-[Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar) closes this gap.
+[Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar) has closed this gap.
 
 I already mentioned that I use [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) as base for this blog.
 In its gem configuration (`Gemfile`) I attached *Jekyll-Scholar* as follow.
@@ -60,9 +60,9 @@ scholar:
 
 In this settings, the value of `source` describe the location and the value of `references` the name of my BibTeX file.
 According to my settings, I put my BibTeX file with the name *references.bib* in the directory *_bibliography*.
-As citation style I used modified version of *ieee-with-url* from the [official repository for distribution of validated CSL citation styles](https://github.com/citation-style-language/styles-distribution), which I copied to the directory `assets/bibliography/`.
+As citation style I used a modified version of *ieee-with-url* from the [official repository for distribution of validated CSL citation styles](https://github.com/citation-style-language/styles-distribution), which I copied to the directory `assets/bibliography/`.
 I removed the citation number from this style, which is unimportant for my web site.
-The differences to original is minimal and is shown as follow:
+The differences to original is minimal and is shown in following *diff*:
 
 {% highlight diff %}
 diff --git a/assets/bibliography/ieee-with-url.csl b/assets/bibliography/ieee-with-url.csl
@@ -90,7 +90,7 @@ index 08dbeb1..da17fb0 100755
        <!-- Rest of Citation -->
 {% endhighlight %}
 
-Furthermore, I defined as follows with the file `bibtex.html` in the directory `_layout` the layout of my publication list:
+Furthermore, I defined with the following file `bibtex.html` in the directory `_layout` the layout of my publication list:
 
 {% highlight html %}
 ---
@@ -125,8 +125,8 @@ Furthermore, I defined as follows with the file `bibtex.html` in the directory `
 
 The final step was to write a markdown file with the description of the web site, which contains the publication list.
 In my case, I sorted the list by the year of publication.
-Consequently, I had to query the bibliography per year.
-The first half of the file looks therefore as follows:
+Consequently, I had to query the bibliography for every year.
+The first half of the file looks as follows:
 
 {% highlight html %}
 ---
@@ -146,7 +146,8 @@ share: false
 {{ "{% bibliography --query @*[year=2014] " }}%}
 {% endhighlight %}
 
-The rest of the file is an iteration over the year. The final result is a publication list as follows:
+The rest of the file is an iteration over the years.
+The final result is a publication list as follows:
 
 ### 2015
 
