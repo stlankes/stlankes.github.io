@@ -16,6 +16,7 @@ In this memo, I later use the shared libraries of the host system (x86_64).
 It is the fastest way to build a system from scratch, but it is not the correct way.
 To avoid dependencies between the host and the target system, you should use [BuildRoot](http://buildroot.org) to create the *initial ramdisk*.
 For my tests, I am pretty sure that there are no dependencies to my host system.
+The memo is derived from [Humpherys' post](http://mgalgs.github.io/2012/03/23/how-to-build-a-custom-linux-kernel-for-qemu.html) and tailored for my requirements.
 
 ### Building BusyBox
 
