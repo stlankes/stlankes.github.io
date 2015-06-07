@@ -8,14 +8,14 @@ share: true
 comments: true
 ---
 
-I create often a customized version of the Linux kernel and test it with the open source machine emulator [Qemu](http://www.qemu.org).
+I frequently create a customized version of the Linux kernel and test it with the open source machine emulator [Qemu](http://www.qemu.org).
 To create a small system, I use [BusyBox](http://www.busybox.net), which provides tiny versions of many common UNIX utilities in a single small executable.
 This will be the base of my *initial ramdisk*.
 
-In this memo, I use later the shared libraries of the host system (x86_64).
+In this memo, I later use the shared libraries of the host system (x86_64).
 It is the fastest way to build a system from scratch, but it is not the correct way.
 To avoid dependencies between the host and the target system, you should use [BuildRoot](http://buildroot.org) to create the *initial ramdisk*.
-For my tests, I am pretty sure to have no dependencies to my host system.
+For my tests, I am pretty sure that there are no dependencies to my host system.
 
 ### Building BusyBox
 
@@ -26,14 +26,13 @@ Download and unpack the BusyBox source file:
 	cd busybox-1.23.2/
 	
 Configure BusyBox with `make menuconfig`.
-In principle I use the default configuration.
-I change only follow options:
+I used the default configuration and changed only the following options:
 
 	CONFIG_DESKTOP=n
 	CONFIG_EXTRA_CFLAGS=-m64
 	CONFIG_EXTRA_LDFLAGS=-m64
 	
-I use these options to be sure that a 64bit version (x86_64) of BusyBox will be build.
+I used these options to be sure that a 64bit version (x86_64) of BusyBox will be built.
 Furthermore, *desktop features* are not required to test the Linux extensions.
 
 Building and installing BusyBox:
@@ -43,9 +42,9 @@ Building and installing BusyBox:
 
 Afterwards, the binaries are installed in the directory `_install`, which is created in the root directory of the source tree.
 
-### Building of the initial ramdisk
+### Building the initial ramdisk
 
-To build the *initial ramdisk*, the directory structure has to be created as follow:
+To build the *initial ramdisk*, the directory structure has to be created as follows:
 
 	mkdir initramfs
 	cd initramfs
@@ -83,7 +82,7 @@ To build the *initial ramdisk*, the directory structure has to be created as fol
 	ln -s ../proc/kcore     kcore
 	cd ..
 	
-Copy the busybox system to the directory 'initramfs':
+Copy the BusyBox system to the directory 'initramfs':
 
 	cp -avR ../_install/* .
 	
@@ -96,7 +95,7 @@ With the command `ldd` we are able to determine the missing files:
 		libc.so.6 => /lib64/libc.so.6 (0x00007f38d69b3000)
 		/lib64/ld-linux-x86-64.so.2 (0x00007f38d708f000)
 		
-I already mentioned that I use the shared libraries from my host system.
+As I already mentioned, I use the shared libraries from my host system.
 Consequently, I copy these files from my host file system to the directory *initramfs*
 
 	mkdir -pv usr/lib
@@ -106,10 +105,10 @@ Consequently, I copy these files from my host file system to the directory *init
 	cp -av /lib64/ld-2.17.so lib/
 	cp -av /lib64/ld-linux-x86-64.so.2 lib/
 	
-By running `sudo chroot . /bin/sh` in your directory *initramfs*, you can check if your shared libraries are correctly imported.
+By running `sudo chroot . /bin/sh` in your directory *initramfs*, you can check if your shared libraries are imported correctly.
 
-Now, we have to create `/init`, which will be stared after the last stage of the boot process.
-It is a shell script, which mounts some pseudo file systems, initiate the ethernet device and starts a shell.
+Now, we have to create `/init`, which will be started after the last stage of the boot process.
+It is a shell script, which mounts some pseudo file systems, initiates the ethernet device and starts a shell.
 
 	#!/bin/sh
 	
@@ -132,15 +131,15 @@ Finally, make `/init` executable and create the *initial ramdisk*:
 	
 ### Kernel Configuration
 
-To create for this memo a customized version of Linux, I downloaded the [source code](https://www.kernel.org) from Linux 3.19.5 and unpack the tarball into a dircetory, which I called `linux`.
-Mostly I start with a minimal configuration and add only, what I need:
+To create a customized version of Linux for this memo, I downloaded the [source code](https://www.kernel.org) from Linux 3.19.5 and unpacked the tarball into a directory, which I called `linux`.
+In most cases I start with a minimal configuration and add only what I need:
 
 	cd linux
 	make allnoconfig
 	make menuconfig
 	
-For this memo, I use configuration, which create a small but not the smallest version of Linux.
-But it fits mostly to my use cases.
+For this memo, I used a configuration which creates a small - but not the smallest - version of Linux.
+It fits most of my use cases.
 
 	CONFIG_64BIT=y
 	CONFIG_EMBEDDED=n
@@ -179,7 +178,7 @@ But it fits mostly to my use cases.
 	CONFIG_X86_VERBOSE_BOOTUP=y
 	CONFIG_EARLY_PRINTK=y
 	
-At last, we build the Linux kernel with following command:
+At last, I built the Linux kernel with the following command:
 
 	make
 	
@@ -189,8 +188,8 @@ Now we are ready to boot our virtual machine!
 
 	qemu-system-x86_64 -smp 2 -kernel /path-to/bzImage -initrd /path-to/myinitrd.cpio -append "root=/dev/ram0 rootfstype=ramfs init=init console=ttyS0" -net nic,model=rtl8139 -net user  -net dump -nographic
 
-Instead of creating a dedicated window, I redirect the output of the virtual machines to the console of my host system.
-This is realized by using the serial port (`ttyS0`) as the communication interface to Linux system.
-Consequently, I set the kernel paramater `console` to `ttyS0` and disable the graphical output with `-nographic`.
+Instead of creating a dedicated window, I redirected the output of the virtual machines to the console of my host system.
+This is realized by using the serial port (`ttyS0`) as the communication interface to the Linux system.
+Consequently, I set the kernel paramater `console` to `ttyS0` and disabled the graphical output with `-nographic`.
 
-That's it! Maybe the tutorial about [kernel debugging](https://techblog.lankes.org/tutorials/kernel-debugging-with-qemu/) is interesting to start kernel development.
+That's it! Hopefully the tutorial about [kernel debugging](https://techblog.lankes.org/tutorials/kernel-debugging-with-qemu/) is interesting enough to start you in kernel development.

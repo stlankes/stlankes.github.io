@@ -9,31 +9,31 @@ comments: true
 ---
 
 I have migrated my blog from Wordpress to [Jekyll](http://jekyllrb.com/).
-Jekyll fits more to my workflow and it exists a few nice open source themes.
+Jekyll is the better choice for my workflow and there exist quite a few nice open source themes.
 For instance, [jekyllthemes.org](http://jekyllthemes.org) provides a collection of great themes. 
-I like the themes from [Michael Rose](https://mademistakes.com/work/) and use his theme [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) as base for this blog.
+I like the themes from [Michael Rose](https://mademistakes.com/work/) and use his theme [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) as a base for this blog.
  
 For the migration, I used the guideline from [PullReview](http://blog.8thcolor.com/en/2014/05/migrate-from-wordpress/).
-Only my publication list was a challenge.
+However, my publication list presented a real challenge.
 Nearly all my papers are written in LaTeX.
-Consequently, I maintain my publications with a [BibTeX](http://en.wikipedia.org/wiki/BibTeX) file and I want to generate automatically my publication list from this file.
-[Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar) has closed this gap.
+Consequently, I maintain my publications with a [BibTeX](http://en.wikipedia.org/wiki/BibTeX) file and I want to automatically generate my publication list from this file.
+[Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar) was able to close this gap.
 
-I already mentioned that I use [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) as base for this blog.
-In its gem configuration file (`Gemfile`) I attached *Jekyll-Scholar* as follow.
+I already mentioned that I use [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) as a base for this blog.
+In its gem configuration file (`Gemfile`) I attached  the following for *Jekyll-Scholar*:
 
 {% highlight bash %}
 gem 'jekyll-scholar'
 {% endhighlight %}
 
-If you use [Bundler](http://bundler.io), you are now able to update you system to the latest versions of Jekyll-Scholar.
-To enable it, I created the file `ext.rb` in the plugin directory (`_plugins`) with following statement:
+If you use [Bundler](http://bundler.io), you are now able to update your system to the latest versions of Jekyll-Scholar.
+To enable it, I created the file `ext.rb` in the plugin directory (`_plugins`) with the following statement:
 
 {% highlight ruby %}
 require 'jekyll/scholar'
 {% endhighlight %}
 
-In the configuration file (`_config.yml`) of my web site, I attached following Jekyll-Scholar settings:
+In the configuration file (`_config.yml`) of my web site, I attached the following Jekyll-Scholar settings:
 
 {% highlight yaml %}
 scholar:
@@ -58,11 +58,11 @@ scholar:
   query: "@*"
 {% endhighlight %}
 
-In this settings, the value of `source` describe the location and the value of `references` the name of my BibTeX file.
+In this settings, the value of `source` describes the location and the value of `references` the name of my BibTeX file.
 According to my settings, I put my BibTeX file with the name *references.bib* in the directory *_bibliography*.
 As citation style I used a modified version of *ieee-with-url* from the [official repository for distribution of validated CSL citation styles](https://github.com/citation-style-language/styles-distribution), which I copied to the directory `assets/bibliography/`.
 I removed the citation number from this style, which is nonrelevant for my web site.
-The differences to original is minimal and is shown in following *diff*:
+The differences to the original are minimal and are shown as follows *diff*:
 
 {% highlight diff %}
 diff --git a/assets/bibliography/ieee-with-url.csl b/assets/bibliography/ieee-with-url.csl
@@ -90,7 +90,7 @@ index 08dbeb1..da17fb0 100755
        <!-- Rest of Citation -->
 {% endhighlight %}
 
-Furthermore, I defined with the file `bibtex.html` in the directory `_layout` the layout of my publication list.
+Furthermore, with the file `bibtex.html` I defined the layout of my publication list in the directory `_layout`.
 The current version of `bibtex.html` is shown below:
 
 {% highlight html %}
@@ -158,6 +158,6 @@ The final result is a publication list as follows:
 
 {% bibliography --query @*[year=2014] %}
 
-In principle is this an extremly simple approach to generate a publication list.
-Unfortunatly, Jekyll-Scholar [isn't supported](https://pages.github.com/versions/) by [GitHub pages](https://pages.github.com).
-I hope that this will change...
+In principle, this is an extremly simple approach to generating a publication list.
+Unfortunately, Jekyll-Scholar [isn't supported](https://pages.github.com/versions/) by [GitHub pages](https://pages.github.com).
+I hope that this will change in the future...
