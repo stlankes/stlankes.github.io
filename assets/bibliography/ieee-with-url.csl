@@ -72,7 +72,7 @@
       <else>
         <date variable="issued">
           <date-part name="day" form="numeric-leading-zeros" suffix="-"/>
-          <date-part name="month" form="short" suffix="-" strip-periods="true"/>
+          <date-part name="month" form="short" suffix=" " strip-periods="true"/>
           <date-part name="year" form="long"/>
         </date>
       </else>
@@ -177,7 +177,7 @@
             <text term="accessed" text-case="capitalize-first"/>
             <date variable="accessed">
               <date-part name="day" form="numeric-leading-zeros" suffix="-"/>
-              <date-part name="month" form="short" suffix="-" strip-periods="true"/>
+              <date-part name="month" form="short" suffix=" " strip-periods="true"/>
               <date-part name="year" form="long"/>
             </date>
           </group>
