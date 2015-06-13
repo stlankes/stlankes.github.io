@@ -2,6 +2,7 @@
 layout: post
 title: "From Wordpress to Jekyll"
 date: 2015-04-06
+modified: 2015-06-07
 thumb: devnull.jpg
 tags: [blog, LaTeX, Jekyll]
 share: true

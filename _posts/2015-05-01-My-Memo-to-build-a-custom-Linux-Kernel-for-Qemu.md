@@ -2,6 +2,7 @@
 layout: post
 title: "My Memo to build a customized Linux Kernel for Qemu"
 date: 2015-05-01
+modified: 2015-06-13
 thumb: tux.png
 tags: [Linux, Kernel]
 share: true
