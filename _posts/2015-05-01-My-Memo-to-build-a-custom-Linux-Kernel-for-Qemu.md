@@ -215,4 +215,6 @@ Instead of creating a dedicated window, I redirected the output of the virtual m
 This is realized by using the serial port (`ttyS0`) as the communication interface to the Linux system.
 Consequently, I set the kernel paramater `console` to `ttyS0` and disabled the graphical output with `-nographic`.
 
+Sometimes it is important to get access to Qemu's monitor, which is used to inspect the VM state without an external debugger. Add the parameter `-monitor telnet:127.0.0.1:1234,server,nowait` to open the port `1234` for the localhost. Afterwards the monitor is available via telnet (try `telnet localhost 1234`).
+
 That's it! Hopefully the tutorial about [kernel debugging](https://techblog.lankes.org/tutorials/kernel-debugging-with-qemu/) is interesting enough to start you in kernel development.
