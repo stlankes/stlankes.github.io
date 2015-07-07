@@ -7,7 +7,7 @@ thumb: thumbnail-dom.jpg
 share: true
 ---
 
-Panoramic view from [ROME’s venue](http://www.rome.eonerc.rwth-aachen.de/aachen2013/)
+Panoramic view from [ROME’s venue](https://wrome.github.io/aachen2013/)
 
 <figure>
 <img src="/images/dom.jpg">

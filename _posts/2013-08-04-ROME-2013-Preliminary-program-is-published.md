@@ -7,4 +7,4 @@ thumb: rome-logo.png
 share: true
 ---
 
-The program of the [1st Workshop on Runtime and Operating Systems for the Many-core Era (ROME 2013)](http://www.rome.eonerc.rwth-aachen.de/aachen2013/) is now online.
+The program of the [1st Workshop on Runtime and Operating Systems for the Many-core Era (ROME 2013)](https://wrome.github.io/aachen2013/) is now online.
