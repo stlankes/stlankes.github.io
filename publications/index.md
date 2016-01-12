@@ -2,7 +2,7 @@
 layout: page
 title: "Publications"
 date: 2013-04-08T23:28:02.362000+01:00 
-modified: 2015-03-22T23:06:00.362000+01:00
+modified: 2016-01-12T23:06:00.362000+01:00
 excerpt:
 share: false
 image:
@@ -10,6 +10,10 @@ image:
   credit:  Derrick Coetzee (CC0 1.0)
   creditlink: http://www.flickr.com/photos/dcoetzee/6271190493/
 ---
+
+### 2016
+
+{% bibliography --query @*[year=2016] %}
 
 ### 2015
 
