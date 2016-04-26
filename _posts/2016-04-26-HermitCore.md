@@ -16,3 +16,8 @@ This approach achieves a lower OS jitter and a better scalability. HermitCore ap
 
 HermitCore is the result of a research project at RWTH Aachen University and is currently an experimental approach, i.e. not production ready. Please use it carefully.
 A first paper with preliminary results will be published at the [International Workshop on Runtime and Operating Systems for Supercomputers (ROSS 2016)](http://www.mcs.anl.gov/events/workshops/ross/2016/).
+The HermitCore's mode of operation will be outlined by the following video:
+
+<p>
+<script type="text/javascript" src="https://asciinema.org/a/06yk7ltvvos9l626ut6xk9h7b.js" id="asciicast-06yk7ltvvos9l626ut6xk9h7b" async></script>
+</p>
