@@ -167,6 +167,7 @@
   </macro>
   <macro name="access">
     <choose>
+<!--
       <if variable="URL">
         <group delimiter=". ">
           <group delimiter=": ">
@@ -183,6 +184,7 @@
           </group>
         </group>
       </if>
+-->
     </choose>
   </macro>
   <macro name="page">
@@ -329,11 +331,13 @@
             </group>
           </else>
         </choose>
+<!--
         <choose>
           <if variable="URL">
             <text value=" [Online]"/>
           </if>
         </choose>
+-->
       </group>
       <text macro="access"/>
     </layout>
