@@ -193,6 +193,9 @@
       <text variable="page"/>
     </group>
   </macro>
+  <macro name="note">
+    <text variable="note"/>
+  </macro>
   <macro name="citation-locator">
     <group delimiter=" ">
       <choose>
@@ -247,6 +250,7 @@
               <text macro="issued"/>
               <text macro="locators"/>
               <text macro="page"/>
+              <text macro="note"/>
             </group>
           </else-if>
           <else-if type="report">
