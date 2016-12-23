@@ -11,6 +11,10 @@ image:
   creditlink: http://www.flickr.com/photos/dcoetzee/6271190493/
 ---
 
+### 2017
+
+{% bibliography --query @*[year=2017] %}
+
 ### 2016
 
 {% bibliography --query @*[year=2016] %}
