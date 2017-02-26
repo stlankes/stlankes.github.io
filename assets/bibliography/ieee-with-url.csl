@@ -304,6 +304,7 @@
               <text macro="publisher"/>
               <text macro="page"/>
               <text macro="issued"/>
+              <text macro="note"/>
             </group>
           </else-if>
           <else-if type="chapter paper-conference" match="any">
