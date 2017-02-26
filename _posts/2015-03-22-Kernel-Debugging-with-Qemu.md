@@ -1,8 +1,9 @@
 ---
-layout: page
-title: "Part II: Kernel debugging with qemu"
-date: 2013-09-09T14:31:00.362000+01:00
-modified: 2015-03-22T23:06:00.362000+01:00
+layout: post
+title: "Kernel debugging with Qemu"
+date: 2015-03-22
+thumb: thumbnail-eduos.jpg
+tags: [Tutorials]
 image:
   feature: ritchie.jpg
   credit: Peter Hamer [CC BY-SA 2.0]
@@ -11,8 +12,7 @@ comments: true
 share: true
 ---
 
-Before I continued my kernel tutorial, I would like to explain the easiest form of kernel debugging.
-I used [QEMU](http://www.qemu.org/) as test platform, which is an open source machine emulator and virtualizer for a general-purpose computer architectures.
+I used mostly [QEMU](http://www.qemu.org/) as test platform, which is an open source machine emulator and virtualizer for a general-purpose computer architectures.
 Therefore, it is an ideal platform  to debug basic components of an operating system kernel.
 
 Usally, I would explain kernel debugging based on my minimal kernel, which I presented in the [first part of my kernel tutorials](/tutorials/smallest-helloworld-of-the-world-or-not.html).

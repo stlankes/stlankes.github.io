@@ -1,17 +1,14 @@
 ---
-layout: page
-title: "Part I: The 'smallest' HelloWorld of the World (or not)"
-date: 2013-09-09T14:31:00.362000+01:00
-modified: 2015-03-22T23:06:00.362000+01:00
-image:
-  feature: ritchie.jpg
-  credit: Peter Hamer [CC BY-SA 2.0]
-  creditlink: https://en.wikipedia.org/wiki/Unix
+layout: post
+title: "The 'smallest' HelloWorld of the World (or not)"
+date: 2015-03-20
+thumb: thumbnail-eduos.jpg
+tags: [Tutorials]
 comments: true
 share: true
 ---
 
-First, I want to show how a kernel can be loaded into the memory and
+I want to show how a kernel can be loaded into the memory and
 print some messages on the screen. At this point, the kernel is only a
 *HelloWorld application*, which runs bare-metal on the hardware. The
 example code is published as branch *stage0* at the GitHub repository
