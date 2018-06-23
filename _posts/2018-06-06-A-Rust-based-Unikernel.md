@@ -2,6 +2,7 @@
 layout: post
 title: "A Rust-based Unikernel"
 date: 2018-06-06
+thumb: devnull.jpg
 tags: [Unikernels, Rust, link post]
 link: https://hermitcore.org/2018/06/06/A-Rust-based-Unikernel/
 share: true
