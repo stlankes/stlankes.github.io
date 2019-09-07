@@ -54,12 +54,12 @@ owner:
   disqus-shortname: stefanstechblog 
   twitter: stlankes
   facebook: #username
-  google:
-    plus: StefanLankes
-    analytics: 
-    verify: 
-    ad-client: 
-    ad-slot: 
+  #google:
+  #  plus: StefanLankes
+  #  analytics: 
+  #  verify: 
+  #  ad-client: 
+  #  ad-slot: 
   bing-verify: 
   github: stlankes
   stackoverflow: #http://stackoverflow.com/users/123456/username
